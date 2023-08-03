@@ -1,78 +1,13 @@
-# IntelliJ Platform Plugin Template
-
-[![official JetBrains project](https://jb.gg/badges/official.svg)][jb:github]
-[![Twitter Follow](https://img.shields.io/badge/follow-%40JBPlatform-1DA1F2?logo=twitter)](https://twitter.com/JBPlatform)
-[![Build](https://github.com/JetBrains/intellij-platform-plugin-template/workflows/Build/badge.svg)][gh:build]
-[![Slack](https://img.shields.io/badge/Slack-%23intellij--platform-blue?style=flat-square&logo=Slack)](https://plugins.jetbrains.com/slack)
-
-![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-dark]
-![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-light]
-
-> **Note**
-> 
-> Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA.
-
-<!-- Plugin description -->
-**IntelliJ Platform Plugin Template** is a repository that provides a pure template to make it easier to create a new plugin project (check the [Creating a repository from a template][gh:template] article).
-
-The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.
-
-[gh:template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
-<!-- Plugin description end -->
-
-If you're still not quite sure what this is all about, read our introduction: [What is the IntelliJ Platform?][docs:intro]
-
-> **Note**
-> 
-> Click the <kbd>Watch</kbd> button on the top to be notified about releases containing new features and fixes.
-
-### Table of contents
-
-In this README, we will highlight the following elements of template-project creation:
-
-- [Getting started](#getting-started)
-- [Gradle configuration](#gradle-configuration)
-- [Plugin template structure](#plugin-template-structure)
-- [Plugin configuration file](#plugin-configuration-file)
-- [Sample code](#sample-code):
-  - listeners – project lifecycle listener
-  - services – project and application-level services
-- [Testing](#testing)
-  - [Functional tests](#functional-tests)
-  - [Code coverage](#code-coverage)
-  - [UI tests](#ui-tests)
-- [Qodana integration](#qodana-integration)
-- [Predefined Run/Debug configurations](#predefined-rundebug-configurations)
-- [Continuous integration](#continuous-integration) based on GitHub Actions
-  - [Dependencies management](#dependencies-management) with Dependabot
-  - [Changelog maintenance](#changelog-maintenance) with the Gradle Changelog Plugin
-  - [Release flow](#release-flow) using GitHub Releases
-  - [Plugin signing](#plugin-signing) with your private certificate
-  - [Publishing the plugin](#publishing-the-plugin) with the Gradle IntelliJ Plugin
-- [FAQ](#faq)
-- [Useful links](#useful-links)
-
-
-## Getting started
-
-Before we dive into plugin development and everything related to it, it's worth mentioning the benefits of using GitHub Templates.
-By creating a new project using the current template, you start with no history or reference to this repository.
-This allows you to create a new repository easily without copying and pasting previous content, clone repositories, or clearing the history manually.
-
-All you have to do is click the <kbd>Use this template</kbd> button (you must be logged in with your GitHub account).
-
-![Use this template][file:use-this-template.png]
-
-After using the template to create your blank project, the [Template Cleanup][file:template_cleanup.yml] workflow will be triggered to override or remove any template-specific configurations, such as the plugin name, current changelog, etc.
-Once this is complete, the project is ready to be cloned to your local environment and opened with [IntelliJ IDEA][jb:download-ij].
-
-For the last step, you have to manually review the configuration variables described in the [`gradle.properties`][file:gradle.properties] file and *optionally* move sources from the *com.github.username.repository* package to the one that works best for you.
-Then you can get to work implementing your ideas.
 
 > **Note**
 > 
 > To use Java in your plugin, create the `/src/main/java` directory.
 
+> 
+> 如果使用了Android studio 2022.3.1， 编译时需要不能使用默认的java17，需要选择java 11
+> 否则报 Cannot resolve the latest Gradle IntelliJ Plugin version 的错误
+> 或者去更新pluginSinceBuild的属性
+> 
 
 ## Gradle configuration
 

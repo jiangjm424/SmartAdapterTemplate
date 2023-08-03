@@ -18,6 +18,12 @@ version = properties("pluginVersion").get()
 
 // Configure project's dependencies
 repositories {
+//    maven {
+//        setUrl("https://maven.aliyun.com/repository/central")
+//    }
+//    maven {
+//        setUrl("https://maven.aliyun.com/repository/public")
+//    }
     mavenCentral()
 }
 
